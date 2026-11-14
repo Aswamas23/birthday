@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A special birthday gift celebrating Shekinah turning 22, made with love.">
+  <meta name="theme-color" content="#BFE3F8">
+  <meta property="og:title" content="Happy Birthday Shekinah 💙🩷">
+  <meta property="og:description" content="Something special is waiting for you. Happy 22nd Birthday!">
+  <meta property="og:type" content="website">
+
+  <title>Happy Birthday Shekinah 💙🩷</title>
+
+  <!-- Favicon: Inline Heart SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23F4A6C0' stroke='%238CCBEF' stroke-width='4' d='M50 88.9 C25 68 5 50 5 30 A24 24 0 0 1 50 17 A24 24 0 0 1 95 30 C95 50 75 68 50 88.9 Z'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Great Vibes (headings) & Poppins (body text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Confetti CDN (loaded with defer, feature-detected in JS) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- Configuration and Main Script (executed in declaration order after HTML parsing) -->
+  <script defer src="js/config.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Ambient Floating Background Particles (Hearts, Bubbles, Sparkles) -->
+  <div class="ambient-particles" aria-hidden="true">
+    <span class="particle particle-1">🌸</span>
+    <span class="particle particle-2">💙</span>
+    <span class="particle particle-3">✨</span>
+    <span class="particle particle-4">🩷</span>
+    <span class="particle particle-5">🫧</span>
+    <span class="particle particle-6">🌸</span>
+    <span class="particle particle-7">💫</span>
+    <span class="particle particle-8">🩷</span>
+    <span class="particle particle-9">💙</span>
+    <span class="particle particle-10">✨</span>
+  </div>
+
+  <!-- SECTION 1: Welcome Screen (Full-Viewport Modal Overlay) -->
+  <section id="welcome" class="welcome-overlay" aria-label="Birthday Welcome Message">
+    <div class="welcome-card reveal visible">
+      <div class="welcome-badge" aria-hidden="true">🎂 22nd Birthday</div>
+      <h1 class="welcome-name"><span class="welcome-prefix">For My Beautiful</span> <span id="welcome-recipient-name">Shekinah</span></h1>
+      <p class="welcome-sub">Something special is waiting for you...</p>
+
+      <!-- Optional Password Gate Container (populated if passwordGate is active in config) -->
+      <div id="password-gate-container" class="password-gate-container hidden">
+        <label for="password-gate-input" class="gate-label">Enter her birthday to unlock:</label>
+        <div class="gate-input-wrapper">
+          <input type="text" id="password-gate-input" class="gate-input" placeholder="e.g. November 11" autocomplete="off" aria-describedby="gate-error-msg">
+        </div>
+        <p id="gate-error-msg" class="gate-error-msg" role="status" aria-live="polite"></p>
+      </div>
+
+      <button type="button" id="open-gift-btn" class="btn btn-primary pulse-btn">
+        <span class="btn-text">Open your gift</span>
+        <span class="btn-icon" aria-hidden="true">🎁</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Floating Frosted-Glass Pill Navigation (Links to the 9 post-overlay sections) -->
+  <nav id="floating-nav" class="floating-nav" aria-label="Main Navigation">
+    <div class="nav-track">
+      <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+      <a href="#then-gallery" class="nav-link" data-section="then-gallery">Then</a>
+      <a href="#now-gallery" class="nav-link" data-section="now-gallery">Now</a>
+      <a href="#year-transition" class="nav-link" data-section="year-transition">21 to 22</a>
+      <a href="#cake" class="nav-link" data-section="cake">Wish</a>
+      <a href="#love-reasons" class="nav-link" data-section="love-reasons">Reasons</a>
+      <a href="#timeline" class="nav-link" data-section="timeline">Story</a>
+      <a href="#love-letter" class="nav-link" data-section="love-letter">Letter</a>
+      <a href="#footer" class="nav-link" data-section="footer">Love</a>
+    </div>
+  </nav>
+
+  <!-- Fixed Music Toggle Button -->
+  <button type="button" id="music-toggle" class="music-toggle" aria-label="Play background music" aria-pressed="false" title="Play background music">
+    <span class="music-icon" aria-hidden="true">🎵</span>
+    <span id="music-label" class="music-label">Play music</span>
+  </button>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="main-content">
+    
+    <!-- SECTION 2: Hero -->
+    <section id="hero" class="section hero-section" aria-labelledby="hero-title">
+      <div class="container hero-container">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-crown" aria-hidden="true">👑</div>
+        <h1 class="hero-heading">
+          <span id="hero-title" class="hero-title-text"></span>
+          <span class="typing-cursor" aria-hidden="true">|</span>
+        </h1>
+        <p class="hero-subtitle reveal">Today the whole world celebrates the most extraordinary girl. Welcome to your special day, my love.</p>
+        <div class="hero-decorations" aria-hidden="true">
+          <span class="float-bubble b1">🎈</span>
+          <span class="float-bubble b2">💖</span>
+          <span class="float-bubble b3">✨</span>
+          <span class="float-bubble b4">🌸</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Then (Childhood Photos Carousel) -->
+    <section id="then-gallery" class="section then-section" aria-labelledby="then-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Childhood Memories</span>
+          <h2 id="then-title" class="section-title">Little <span class="recipient-first-name">Shekinah</span></h2>
+          <p class="section-desc">Before I ever knew you, you were already bringing sunshine into this world.</p>
+        </div>
+
+        <div class="carousel-container reveal">
+          <button type="button" id="then-prev" class="carousel-btn prev-btn" aria-label="Previous childhood photo">
+            <span aria-hidden="true">&#10094;</span>
+          </button>
+
+          <div class="carousel-viewport" id="then-viewport" tabindex="0" role="region" aria-label="Childhood photos carousel">
+            <div id="then-track" class="carousel-track">
+              <!-- Populated by JavaScript from CONFIG.thenPhotos -->
+            </div>
+          </div>
+
+          <button type="button" id="then-next" class="carousel-btn next-btn" aria-label="Next childhood photo">
+            <span aria-hidden="true">&#10095;</span>
+          </button>
+        </div>
+
+        <div id="then-dots" class="carousel-dots" role="tablist" aria-label="Carousel slide controls">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Now (Recent Photos Grid with Lightbox) -->
+    <section id="now-gallery" class="section now-section" aria-labelledby="now-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Today & Always</span>
+          <h2 id="now-title" class="section-title">Beautiful <span class="recipient-first-name">Shekinah</span></h2>
+          <p class="section-desc">Every smile, every glance, every single day — you leave me completely breathless.</p>
+        </div>
+
+        <div id="now-grid" class="now-grid reveal">
+          <!-- Populated by JavaScript from CONFIG.nowPhotos -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: 21 to 22 Transition -->
+    <section id="year-transition" class="section transition-section" aria-labelledby="transition-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">A Beautiful Milestone</span>
+          <h2 id="transition-title" class="section-title">21 to 22</h2>
+          <p class="section-desc">Last year you were 21... this year you're 22.</p>
+        </div>
+
+        <div class="transition-wrapper reveal">
+          <div class="transition-photo-col">
+            <div class="transition-photos">
+              <div class="polaroid-frame">
+                <div class="photo-wrapper">
+                  <img id="photo-21st" src="images/21st/WhatsApp Image 2026-11-03 at 07.55.01 (3).jpeg" alt="Shekinah celebrating 21" loading="lazy">
+                </div>
+                <p id="photo-21st-caption" class="polaroid-caption">21 and already my entire world 🎂</p>
+              </div>
+              <div class="polaroid-frame">
+                <div class="photo-wrapper">
+                  <img id="photo-21st-second" src="images/21st/WhatsApp Image 2026-11-03 at 07.55.02.jpeg" alt="Another memory from Shekinah's 21st birthday" loading="lazy">
+                </div>
+                <p id="photo-21st-second-caption" class="polaroid-caption">A beautiful memory from your 21st 💙</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="transition-content-col">
+            <div class="counter-card">
+              <span class="counter-label">Celebrating Your New Chapter</span>
+              <div class="counter-display" aria-label="Age transitioning from 21 to 22">
+                <div class="year-block year-prev">
+                  <span class="year-num" id="year-from">21</span>
+                  <span class="year-sub">Chapter 21</span>
+                </div>
+                <div class="year-arrow" aria-hidden="true">➔</div>
+                <div class="year-block year-next">
+                  <span class="year-num highlight-num" id="year-to">22</span>
+                  <span class="year-sub">Chapter 22</span>
+                </div>
+              </div>
+              <p class="transition-text">
+                Another year wiser, more radiant, and more deeply cherished. You grow more wonderful with each passing moment, and I am so grateful to be by your side for every single one.
+              </p>
+              <div class="transition-sparkle" aria-hidden="true">✨ 💖 ✨</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Interactive Birthday Cake -->
+    <section id="cake" class="section cake-section" aria-labelledby="cake-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Interactive Celebration</span>
+          <h2 id="cake-title" class="section-title">Blow Out Your Candles</h2>
+          <p class="section-desc">Tap each candle or press the button below to blow them out and make your birthday wish!</p>
+        </div>
+
+        <div class="cake-stage reveal">
+          <!-- Illustrated SVG Cake with 6 Interactive Candles -->
+          <svg class="cake-svg" viewBox="0 0 500 420" width="100%" height="auto" role="img" aria-label="Interactive birthday cake with 6 candles">
+            <defs>
+              <!-- Pastels gradients -->
+              <linearGradient id="plate-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#EBF5FD"/>
+                <stop offset="100%" stop-color="#BFE3F8"/>
+              </linearGradient>
+              <linearGradient id="cake-tier1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FDE8F0"/>
+                <stop offset="50%" stop-color="#FFFFFF"/>
+                <stop offset="100%" stop-color="#FACFDA"/>
+              </linearGradient>
+              <linearGradient id="cake-tier2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#D7EDFB"/>
+                <stop offset="50%" stop-color="#FFFFFF"/>
+                <stop offset="100%" stop-color="#BFE3F8"/>
+              </linearGradient>
+              <linearGradient id="cake-tier3" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FACFDA"/>
+                <stop offset="50%" stop-color="#FFFFFF"/>
+                <stop offset="100%" stop-color="#F4A6C0"/>
+              </linearGradient>
+              <linearGradient id="flame-grad" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#FFB347"/>
+                <stop offset="50%" stop-color="#FFD700"/>
+                <stop offset="100%" stop-color="#FFF8DC"/>
+              </linearGradient>
+              <filter id="cake-shadow" x="-10%" y="-10%" width="120%" height="130%">
+                <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#8CCBEF" flood-opacity="0.25"/>
+              </filter>
+              <filter id="flame-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="3" result="glow"/>
+                <feMerge>
+                  <feMergeNode in="glow"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- Scalloped Pedestal Plate -->
+            <g class="cake-plate" filter="url(#cake-shadow)">
+              <ellipse cx="250" cy="385" rx="210" ry="25" fill="url(#plate-grad)"/>
+              <ellipse cx="250" cy="380" rx="195" ry="18" fill="#FFFFFF" opacity="0.7"/>
+              <path d="M190 395 Q250 415 310 395 L290 415 Q250 420 210 415 Z" fill="#8CCBEF" opacity="0.4"/>
+            </g>
+
+            <!-- Bottom Tier (Tier 1) -->
+            <g class="cake-bottom-tier">
+              <rect x="90" y="270" width="320" height="100" rx="20" fill="url(#cake-tier1)" filter="url(#cake-shadow)"/>
+              <!-- Frosting drips -->
+              <path d="M90 290 Q110 320 130 290 Q150 330 170 290 Q190 325 210 290 Q230 330 250 290 Q270 325 290 290 Q310 330 330 290 Q350 320 370 290 Q390 325 410 290 L410 270 L90 270 Z" fill="#FFFFFF" opacity="0.95"/>
+              <!-- Decorative cream pearls -->
+              <circle cx="130" cy="340" r="6" fill="#8CCBEF"/>
+              <circle cx="180" cy="340" r="6" fill="#F4A6C0"/>
+              <circle cx="230" cy="340" r="6" fill="#8CCBEF"/>
+              <circle cx="280" cy="340" r="6" fill="#F4A6C0"/>
+              <circle cx="330" cy="340" r="6" fill="#8CCBEF"/>
+              <circle cx="380" cy="340" r="6" fill="#F4A6C0"/>
+            </g>
+
+            <!-- Middle Tier (Tier 2) -->
+            <g class="cake-middle-tier">
+              <rect x="135" y="190" width="230" height="85" rx="16" fill="url(#cake-tier2)" filter="url(#cake-shadow)"/>
+              <!-- Frosting drips -->
+              <path d="M135 205 Q155 235 175 205 Q195 240 215 205 Q235 240 255 205 Q275 240 295 205 Q315 235 335 205 Q350 230 365 205 L365 190 L135 190 Z" fill="#FFFFFF" opacity="0.95"/>
+              <!-- Tier heart accents -->
+              <path d="M250 248 C245 240 235 240 235 246 C235 254 250 262 250 262 C250 262 265 254 265 246 C265 240 255 240 250 248 Z" fill="#F4A6C0"/>
+            </g>
+
+            <!-- Top Tier (Tier 3) -->
+            <g class="cake-top-tier">
+              <rect x="175" y="125" width="150" height="70" rx="14" fill="url(#cake-tier3)" filter="url(#cake-shadow)"/>
+              <path d="M175 140 Q190 160 205 140 Q220 165 235 140 Q250 165 265 140 Q280 165 295 140 Q310 160 325 140 L325 125 L175 125 Z" fill="#FFFFFF" opacity="0.95"/>
+            </g>
+
+            <!-- 6 CANDLES (Aria labels Candle 1 .. 6, interactive) -->
+            <!-- Candle 1 -->
+            <g class="candle" id="candle-1" role="button" tabindex="0" aria-label="Candle 1 — click to extinguish" data-candle="1">
+              <rect x="195" y="75" width="12" height="52" rx="4" fill="#8CCBEF"/>
+              <line x1="201" y1="75" x2="201" y2="67" stroke="#3a3a4a" stroke-width="2"/>
+              <path class="flame" d="M201 46 C207 55 207 63 201 67 C195 63 195 55 201 46 Z" fill="url(#flame-grad)" filter="url(#flame-glow)"/>
+            </g>
+
+            <!-- Candle 2 -->
+            <g class="candle" id="candle-2" role="button" tabindex="0" aria-label="Candle 2 — click to extinguish" data-candle="2">
+              <rect x="215" y="70" width="12" height="57" rx="4" fill="#F4A6C0"/>
+              <line x1="221" y1="70" x2="221" y2="62" stroke="#3a3a4a" stroke-width="2"/>
+              <path class="flame" d="M221 41 C227 50 227 58 221 62 C215 58 215 50 221 41 Z" fill="url(#flame-grad)" filter="url(#flame-glow)"/>
+            </g>
+
+            <!-- Candle 3 -->
+            <g class="candle" id="candle-3" role="button" tabindex="0" aria-label="Candle 3 — click to extinguish" data-candle="3">
+              <rect x="235" y="65" width="12" height="62" rx="4" fill="#8CCBEF"/>
+              <line x1="241" y1="65" x2="241" y2="57" stroke="#3a3a4a" stroke-width="2"/>
+              <path class="flame" d="M241 36 C247 45 247 53 241 57 C235 53 235 45 241 36 Z" fill="url(#flame-grad)" filter="url(#flame-glow)"/>
+            </g>
+
+            <!-- Candle 4 -->
+            <g class="candle" id="candle-4" role="button" tabindex="0" aria-label="Candle 4 — click to extinguish" data-candle="4">
+              <rect x="255" y="65" width="12" height="62" rx="4" fill="#F4A6C0"/>
+              <line x1="261" y1="65" x2="261" y2="57" stroke="#3a3a4a" stroke-width="2"/>
+              <path class="flame" d="M261 36 C267 45 267 53 261 57 C255 53 255 45 261 36 Z" fill="url(#flame-grad)" filter="url(#flame-glow)"/>
+            </g>
+
+            <!-- Candle 5 -->
+            <g class="candle" id="candle-5" role="button" tabindex="0" aria-label="Candle 5 — click to extinguish" data-candle="5">
+              <rect x="275" y="70" width="12" height="57" rx="4" fill="#8CCBEF"/>
+              <line x1="281" y1="70" x2="281" y2="62" stroke="#3a3a4a" stroke-width="2"/>
+              <path class="flame" d="M281 41 C287 50 287 58 281 62 C275 58 275 50 281 41 Z" fill="url(#flame-grad)" filter="url(#flame-glow)"/>
+            </g>
+
+            <!-- Candle 6 -->
+            <g class="candle" id="candle-6" role="button" tabindex="0" aria-label="Candle 6 — click to extinguish" data-candle="6">
+              <rect x="295" y="75" width="12" height="52" rx="4" fill="#F4A6C0"/>
+              <line x1="301" y1="75" x2="301" y2="67" stroke="#3a3a4a" stroke-width="2"/>
+              <path class="flame" d="M301 46 C307 55 307 63 301 67 C295 63 295 55 301 46 Z" fill="url(#flame-grad)" filter="url(#flame-glow)"/>
+            </g>
+          </svg>
+
+          <!-- Controls and Wish Feedback -->
+          <div class="cake-actions">
+            <button type="button" id="blow-btn" class="btn btn-secondary">
+              Blow out the candles 🌬️🕯️
+            </button>
+            <div id="wish-prompt" class="wish-prompt hidden" role="status" aria-live="polite">
+              ✨ Make a wish, beautiful! 🌟
+            </div>
+            <div id="wish-message" class="wish-message hidden" role="region" aria-live="polite">
+              <!-- Populated from CONFIG.loveLetter.cakeWishMessage -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: Reasons I Love You (Interactive 3D Flip Cards) -->
+    <section id="love-reasons" class="section reasons-section" aria-labelledby="reasons-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">From the Heart</span>
+          <h2 id="reasons-title" class="section-title">Reasons I Love You</h2>
+          <p class="section-desc">Click or tap any heart to reveal what makes you so irreplaceable to me.</p>
+        </div>
+
+        <div id="love-grid" class="love-grid reveal">
+          <!-- Populated by JavaScript from CONFIG.loveReasons -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: Memory Timeline -->
+    <section id="timeline" class="section timeline-section" aria-labelledby="timeline-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Our Story</span>
+          <h2 id="timeline-title" class="section-title">Moments We Treasure</h2>
+          <p class="section-desc">A few beautiful milestones along our journey together.</p>
+        </div>
+
+        <div id="timeline-track" class="timeline-container">
+          <!-- Populated by JavaScript from CONFIG.timeline -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: Love Letter -->
+    <section id="love-letter" class="section letter-section" aria-labelledby="letter-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">A Special Note</span>
+          <h2 id="letter-title" class="section-title">To My Birthday Girl</h2>
+        </div>
+
+        <div class="letter-card-wrapper reveal">
+          <div class="letter-card" id="letter" aria-label="Birthday love letter">
+            <!-- Populated by JavaScript with staggered .letter-line elements -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SECTION 10: Footer -->
+  <footer id="footer" class="footer-section">
+    <div class="container footer-container">
+      <div class="footer-heart" aria-hidden="true">💖</div>
+      <p class="footer-credit">
+        Made with endless love for <span class="recipient-first-name">Shekinah</span> by <span id="footer-author">Adrian</span> 💙🩷
+      </p>
+      <p class="footer-note">Happy 22nd Birthday, my favorite person in the entire world.</p>
+      <div class="footer-actions">
+        <button type="button" id="replay-btn" class="btn btn-outline">
+          Replay surprise 🎉
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL (For "Now" photo gallery full-screen view) -->
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Photo full-size preview" tabindex="-1">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-dialog">
+      <button type="button" id="lightbox-close" class="lightbox-btn close-btn" aria-label="Close photo preview">✕</button>
+      <button type="button" id="lightbox-prev" class="lightbox-btn prev-btn" aria-label="Previous photo">‹</button>
+      <div class="lightbox-content">
+        <img id="lightbox-img" class="lightbox-image" src="" alt="">
+        <p id="lightbox-caption" class="lightbox-caption"></p>
+        <span id="lightbox-counter" class="lightbox-counter" aria-live="polite"></span>
+      </div>
+      <button type="button" id="lightbox-next" class="lightbox-btn next-btn" aria-label="Next photo">›</button>
+    </div>
+  </div>
+
+</body>
+</html>

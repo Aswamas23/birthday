@@ -1,0 +1,13 @@
+# Dependencies & OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Agent & editor configurations
+.agents/
+.kiro/
+.qodo/
+.vscode/
+
+# Raw staging pictures folder (production assets are in images/ and audio/)
+pictures/
