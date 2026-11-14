@@ -293,10 +293,10 @@ const CONFIG = {
   // Closing Love Letter & Cake Wish Message
   loveLetter: {
     lines: [
-      "Dear Shekinah,",
+    "Dear Shekinah,",
       "",
       "Happy 22nd Birthday to the most beautiful, wonderful soul I know.",
-      "Every year with you feels like a gift I didn't deserve,",
+      "This year with you feels like a gift I didn't deserve,",
       "yet somehow, you chose me.",
       "",
       "You make the world softer, kinder, and more colorful",
